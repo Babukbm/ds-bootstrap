@@ -1,0 +1,33 @@
+<div class="modal-content">
+  <div class="modal-header">   
+    <h3 class="text-center">Subscribe to receive emails</h3>
+  </div>
+  <div class="modal-body row" data-ng-controller="ctrlContactUs">
+    <form action="http://email.trybrick.com/t/i/s/tkkukt/" method="post" id="subForm" role="form" class="col-md-10 col-md-offset-1">
+    <div class="form-group">
+        <label for="fieldEmail">Email</label><br />
+        <input id="fieldEmail" name="cm-tkkukt-tkkukt" class="form-control" type="email" required />
+    </div>
+    <div class="form-group">
+        <label for="fieldName">Name</label><br />
+        <input id="fieldName" name="cm-name" class="form-control" type="text" required/>
+    </div>
+    <div class="form-group">
+        <label for="fieldtlhkij">Store</label><br />
+		<select class="form-control" id="fieldtlhkij" name="cm-f-tlhkij" required>
+<option value="" style="display: none">-- choose a store --</option>  
+ <option ng-repeat="store in stores" value="{{store.StoreNumber}}">{{store.StoreName}}</option>   
+</select>   
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-default">Subscribe</button>
+    </div>
+</form>
+  </div>
+</div>
+
+<style>
+.gmodal {
+  background: none !important;
+}
+</style>
